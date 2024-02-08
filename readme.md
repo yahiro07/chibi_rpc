@@ -13,7 +13,7 @@ deno.json
 
 ```json
 "imports":{
-  "chibi_rpc": "https://deno.land/x/chibi_rpc@v0.1.0/mod.ts",
+  "chibi_rpc": "https://deno.land/x/chibi_rpc@0.1.0/mod.ts",
 }
 ```
 
