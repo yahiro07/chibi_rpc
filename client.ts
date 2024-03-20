@@ -2,6 +2,8 @@ import type { RpcSignaturesBase } from "./types.ts";
 
 type IPreFetchFnExtra = (op: string, payload: any) => void;
 
+export class ChibiRpcClientError extends Error {}
+
 export function createRpcClient<T extends RpcSignaturesBase>(
   urlBase: string,
   options?: {
@@ -49,7 +51,7 @@ export function createRpcClient<T extends RpcSignaturesBase>(
               if (options?.commonErrorHandler) {
                 options.commonErrorHandler(errorMessage);
               }
-              throw new Error(errorMessage);
+              throw new ChibiRpcClientError(errorMessage);
             }
           } finally {
             options?.postFetchFn?.(op);
