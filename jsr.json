@@ -1,0 +1,9 @@
+{
+  "name": "@yahiro/chibi-rpc",
+  "version": "0.1.0",
+  "exports": {
+    "./types": "./types.ts",
+    "./server": "./server.ts",
+    "./client": "./client.ts"
+  }
+}
